@@ -35,10 +35,6 @@ site/                        deployed as the GitHub Pages root
   games/
     <game-slug>/index.html   one checklist page per game
   assets/covers/              cover art (optimized, ~20-60KB each)
-
-yakuza-like-a-dragon-tracker.html   standalone single-file version of the
-                                     Like a Dragon tracker — works offline,
-                                     no server needed, opens with a double-click
 ```
 
 `.github/workflows/deploy.yml` redeploys `site/` to GitHub Pages automatically on every push to `main` that touches it.
