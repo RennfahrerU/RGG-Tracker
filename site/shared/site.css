@@ -22,6 +22,8 @@ html{font-size:100%;} /* 1rem = 16px by default, scales with the browser/user zo
   --bronze:#c99a4a;
   --silver:#cfd8e6;
   --gold-medal:#ffd85e;
+  --gold:#ffd85e;         /* gold accent — platinum section heading */
+  --gold-soft:#7a611f;    /* dim gold — platinum section border */
   --platinum:#e8ecf3;
   --font-display: "Press Start 2P","VT323",monospace;
   --font-body: "VT323","Cascadia Code",monospace;
