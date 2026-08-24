@@ -359,8 +359,8 @@
         <div class="item"><input type="checkbox" id="trophy-fightsidewalk"><label for="trophy-fightsidewalk"><span class="tag tier-bronze">Bronze</span><span class="lbl-name">Fight on the Sidewalk!</span><span class="lbl-note">Get someone hit by a car during a battle. Easy on Hamakita Park Ave. thanks to traffic.</span></label></div>
         <div class="item"><input type="checkbox" id="trophy-treasure"><label for="trophy-treasure"><span class="tag tier-bronze">Bronze</span><span class="lbl-name">Treasure Displeasure</span><span class="lbl-note">Have a creep crawl out of a safe for the first time.</span></label><a class="glink" href="https://gamefaqs.gamespot.com/ps4/272324-yakuza-like-a-dragon/faqs/78735/safes" target="_blank" rel="noopener">guide ↗</a></div>
         <div class="counter-row">
-          <div class="counter-label">Certified Genius<span class="lbl-note">Certificates earned at the Vocational School. <a class="glink" href="https://gamefaqs.gamespot.com/ps4/272324-yakuza-like-a-dragon/faqs/78735/vocational-school" target="_blank" rel="noopener">guide ↗</a></span></div>
-          <div class="counter-input-wrap"><input type="number" id="in-certs" min="0" max="10" value="0"> / 10</div>
+          <div class="counter-label">Certified Genius<span class="lbl-note">21 exams total; passing 10 clears both this trophy and substory #11. <a class="glink" href="https://gamefaqs.gamespot.com/ps4/272324-yakuza-like-a-dragon/faqs/78735/vocational-school" target="_blank" rel="noopener">guide ↗</a></span></div>
+          <div class="counter-input-wrap"><input type="number" id="in-certs" min="0" max="21" value="0"> / 10</div>
         </div>
       </div>
     </details>
@@ -470,7 +470,7 @@
   TROPHIES.push({ tier:'bronze', check: function(){ return isChecked('trophy-presidential'); } });
   TROPHIES.push({ tier:'bronze', check: function(){ return numVal('in-properties') > 10; } });
   TROPHIES.push({ tier:'bronze', check: function(){ return checkedCount('.minigame') >= 10; } });
-  TROPHIES.push({ tier:'bronze', check: function(){ return numVal('in-certs') > 10; } });
+  TROPHIES.push({ tier:'bronze', check: function(){ return numVal('in-certs') >= 10; } });
   TROPHIES.push({ tier:'bronze', check: function(){ return isChecked('trophy-dragonkart'); } });
   TROPHIES.push({ tier:'bronze', check: function(){ return isChecked('trophy-canquest'); } });
   TROPHIES.push({ tier:'bronze', check: function(){ return isChecked('trophy-sleepsheep'); } });
@@ -528,7 +528,7 @@
     var mgDone = checkedCount('.minigame');
     var miscDone = mgDone>=10?1:0;
     ['trophy-dragonkart','trophy-canquest','trophy-sleepsheep','trophy-honkhonk','trophy-fightsidewalk','trophy-treasure'].forEach(function(id){ if(isChecked(id)) miscDone++; });
-    if(numVal('in-certs')>10) miscDone++;
+    if(numVal('in-certs')>=10) miscDone++;
     setBadge('minigames', miscDone+'/8', miscDone>=8);
 
     var lvlDone = checkedCount('#lvl10,#lvl30,#lvl50,#lvl70');
