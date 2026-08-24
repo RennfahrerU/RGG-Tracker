@@ -2,7 +2,7 @@
 
 Interactive Platinum/100% checklists for the Yakuza / Like a Dragon series — chapters, substories, business management, jobs, minigames, and everything else that counts toward completion, not just the trophy list.
 
-![image](site\assets\covers\RGG_Tracker.png)
+![RGG Tracker logo](site/assets/rgg-tracker-logo.jpg)
 
 **Live site:** https://rennfahreru.github.io/RGG-Tracker/
 
