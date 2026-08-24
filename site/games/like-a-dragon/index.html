@@ -13,7 +13,7 @@
 
 <nav class="site-nav">
   <div class="site-nav-inner">
-    <a class="site-brand" href="../../index.html"><span class="dragon">龍</span> Yakuza Tracker</a>
+    <a class="site-brand" href="../../index.html"><span class="dragon">龍</span> Ryu Ga Gotoku Tracker</a>
     <div class="site-nav-links">
       <a href="../../index.html">Games</a>
       <a href="index.html" class="current">Like a Dragon</a>
@@ -172,7 +172,6 @@
         <div class="item"><input type="checkbox" class="substory romance" id="sub49"><label for="sub49"><span class="lbl-name">#49 Certified Lover — Manae Miyakoshi</span><span class="lbl-note">Intellect + Lilies. Requires passing all Vocational School certifications.</span></label><a class="glink" href="https://gamefaqs.gamespot.com/ps4/272324-yakuza-like-a-dragon/faqs/78735/romance-substories" target="_blank" rel="noopener">guide ↗</a></div>
         <div class="item"><input type="checkbox" class="substory romance" id="sub50"><label for="sub50"><span class="lbl-name">#50 Pillow Chat — Iroha Yanagi</span><span class="lbl-note">Charisma + Roses. Requires 40 Party Chats.</span></label><a class="glink" href="https://gamefaqs.gamespot.com/ps4/272324-yakuza-like-a-dragon/faqs/78735/romance-substories" target="_blank" rel="noopener">guide ↗</a></div>
         <div class="item"><input type="checkbox" class="substory romance" id="sub51"><label for="sub51"><span class="lbl-name">#51 The Real Me — Ririka</span><span class="lbl-note">Confidence + Pansies. Requires using every different Job with Kasuga.</span></label><a class="glink" href="https://gamefaqs.gamespot.com/ps4/272324-yakuza-like-a-dragon/faqs/78735/romance-substories" target="_blank" rel="noopener">guide ↗</a></div>
-        <div class="item"><input type="checkbox" id="trophy-playingwithfire"><label for="trophy-playingwithfire"><span class="tag tier-bronze">Bronze</span><span class="lbl-name">Playing With Fire</span><span class="lbl-note">Enter an intimate relationship with more than two women (check once you have it).</span></label></div>
         <div class="item"><input type="checkbox" class="substory" id="sub52"><label for="sub52"><span class="lbl-name">#52 The Lone Survivor</span><span class="lbl-note">After romancing all 6, go to the second floor of Survive, by the bed.</span></label><a class="glink" href="https://gamefaqs.gamespot.com/ps4/272324-yakuza-like-a-dragon/faqs/78735/romance-substories" target="_blank" rel="noopener">guide ↗</a></div>
       </div>
     </details>
@@ -449,7 +448,7 @@
   ['bond-nanba','bond-adachi','bond-saeko','bond-han','bond-zhao','bond-eri'].forEach(function(id){
     TROPHIES.push({ tier:'bronze', check: function(){ return isChecked(id); } });
   });
-  TROPHIES.push({ tier:'bronze', check: function(){ return numVal('in-tabletalk') > 20; } });
+  TROPHIES.push({ tier:'bronze', check: function(){ return numVal('in-tabletalk') >= 20; } });
   TROPHIES.push({ tier:'bronze', check: function(){ return isChecked('hero-senior'); } });
   TROPHIES.push({ tier:'bronze', check: function(){ return isChecked('hero-exec'); } });
   ['lvl10','lvl30','lvl50','lvl70'].forEach(function(id){
@@ -465,10 +464,10 @@
   TROPHIES.push({ tier:'silver', check: function(){ return jobsMaxedTotal() >= 7; } });
   TROPHIES.push({ tier:'bronze', check: function(){ return numVal('in-romanceforge') >= 10; } });
   TROPHIES.push({ tier:'bronze', check: function(){ return isChecked('trophy-forge'); } });
-  TROPHIES.push({ tier:'bronze', check: function(){ return numVal('in-gear') > 100; } });
-  TROPHIES.push({ tier:'bronze', check: function(){ return numVal('in-gear') > 200; } });
-  TROPHIES.push({ tier:'bronze', check: function(){ return numVal('in-sujidex') > 100; } });
-  TROPHIES.push({ tier:'bronze', check: function(){ return numVal('in-sujidex') > 200; } });
+  TROPHIES.push({ tier:'bronze', check: function(){ return numVal('in-gear') >= 100; } });
+  TROPHIES.push({ tier:'bronze', check: function(){ return numVal('in-gear') >= 200; } });
+  TROPHIES.push({ tier:'bronze', check: function(){ return numVal('in-sujidex') >= 100; } });
+  TROPHIES.push({ tier:'bronze', check: function(){ return numVal('in-sujidex') >= 200; } });
   TROPHIES.push({ tier:'bronze', check: function(){ return numVal('in-poundmate') >= 30; } });
   TROPHIES.push({ tier:'bronze', check: function(){ return isChecked('dungeon-sotenbori'); } });
   TROPHIES.push({ tier:'silver', check: function(){ return isChecked('dungeon-premium'); } });
@@ -523,10 +522,10 @@
     var bizDone = ['trophy-moneymaking','trophy-newdigs','trophy-presidential'].filter(isChecked).length + (numVal('in-properties')>10?1:0);
     setBadge('business', bizDone+'/4', bizDone>=4);
 
-    var gearDone = (numVal('in-romanceforge')>=10?1:0) + (isChecked('trophy-forge')?1:0) + (numVal('in-gear')>100?1:0) + (numVal('in-gear')>200?1:0);
+    var gearDone = (numVal('in-romanceforge')>=10?1:0) + (isChecked('trophy-forge')?1:0) + (numVal('in-gear')>=100?1:0) + (numVal('in-gear')>=200?1:0);
     setBadge('gear', gearDone+'/4', gearDone>=4);
 
-    var sujiDone = (numVal('in-sujidex')>100?1:0) + (numVal('in-sujidex')>200?1:0) + (numVal('in-poundmate')>=30?1:0);
+    var sujiDone = (numVal('in-sujidex')>=100?1:0) + (numVal('in-sujidex')>=200?1:0) + (numVal('in-poundmate')>=30?1:0);
     setBadge('sujidex', sujiDone+'/3', sujiDone>=3);
 
     var dungeonDone = checkedCount('#dungeon-yokohama,#dungeon-sotenbori,#dungeon-kamurocho,#dungeon-fmt,#dungeon-tfmt,#dungeon-premium');
@@ -540,7 +539,7 @@
 
     var lvlDone = checkedCount('#lvl10,#lvl30,#lvl50,#lvl70');
     var heroDone = checkedCount('#hero-senior,#hero-exec');
-    var tableOk = numVal('in-tabletalk')>20?1:0;
+    var tableOk = numVal('in-tabletalk')>=20?1:0;
     var miscTotal = lvlDone+heroDone+tableOk;
     setBadge('misc', miscTotal+'/7', miscTotal>=7);
 
