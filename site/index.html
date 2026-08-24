@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yakuza Tracker — Platinum / 100% Checklists</title>
+<meta name="description" content="Interactive checklists for Platinum/100% completion of the Yakuza series, based on CyricZ's guides on GameFAQs.">
+<link rel="stylesheet" href="shared/site.css">
+<style>
+  .hero{
+    max-width:920px;
+    margin:0 auto;
+    padding:64px 20px 40px;
+    text-align:center;
+  }
+  .hero .kicker{justify-content:center;margin-bottom:10px;}
+  .hero h1{
+    font-size:clamp(32px,6vw,52px);
+    margin:0 0 14px;
+  }
+  .hero p{
+    color:var(--text-dim);
+    font-size:15px;
+    max-width:560px;
+    margin:0 auto;
+  }
+  .hero p a{color:var(--text-dim);text-decoration-color:var(--gold-soft);}
+  .hero p a:hover{color:var(--gold);}
+
+  .game-grid{
+    max-width:920px;
+    margin:0 auto;
+    padding:10px 20px 60px;
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));
+    gap:14px;
+  }
+  .game-card{
+    display:block;
+    background:var(--bg-card);
+    border:1px solid var(--line-soft);
+    border-radius:12px;
+    padding:20px;
+    text-decoration:none;
+    position:relative;
+    overflow:hidden;
+    transition:border-color .15s ease, transform .15s ease;
+  }
+  .game-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(135deg, rgba(215,165,63,0.08), transparent 60%);
+    opacity:0;
+    transition:opacity .15s ease;
+  }
+  .game-card.live:hover{border-color:var(--gold-soft);transform:translateY(-2px);}
+  .game-card.live:hover::before{opacity:1;}
+  .game-card.soon{cursor:default;opacity:.55;}
+  .game-num{
+    font-family:var(--font-mono);
+    font-size:11px;
+    color:var(--text-faint);
+    letter-spacing:.08em;
+  }
+  .game-title{
+    font-family:var(--font-display);
+    font-size:19px;
+    color:var(--text);
+    margin:6px 0 8px;
+    text-wrap:balance;
+  }
+  .game-meta{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+  }
+  .game-status{
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    padding:3px 9px;
+    border-radius:20px;
+    border:1px solid var(--line);
+    color:var(--text-faint);
+  }
+  .game-status.live{color:var(--jade);border-color:var(--jade-soft);background:rgba(79,154,125,0.08);}
+  .game-arrow{color:var(--gold);font-family:var(--font-mono);font-size:13px;}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a class="site-brand" href="index.html"><span class="dragon">龍</span> Yakuza Tracker</a>
+    <div class="site-nav-links">
+      <a href="index.html" class="current">Games</a>
+    </div>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="kicker"><span class="dot"></span> UNOFFICIAL · BASED ON CYRICZ'S GUIDES (GAMEFAQS)</div>
+  <h1>Platinum checklists for the whole Yakuza saga</h1>
+  <p>An interactive tracker for every game: chapters, substories, business, minigames, and everything else that counts toward 100% — not just the trophy list. Your progress is saved right in your own browser. Original guides by <a href="https://gamefaqs.gamespot.com/search?game=yakuza&type=all" target="_blank" rel="noopener">CyricZ on GameFAQs</a>.</p>
+</div>
+
+<div class="game-grid">
+  <a class="game-card live" href="games/like-a-dragon/index.html">
+    <span class="game-num">2020 · PS4 / PC / Xbox</span>
+    <h2 class="game-title">Yakuza: Like a Dragon</h2>
+    <div class="game-meta">
+      <span class="game-status live">Available</span>
+      <span class="game-arrow">View tracker →</span>
+    </div>
+  </a>
+
+  <div class="game-card soon">
+    <span class="game-num">2015 · PS3 / PS4 / PC</span>
+    <h2 class="game-title">Yakuza 0</h2>
+    <div class="game-meta">
+      <span class="game-status">Coming soon</span>
+    </div>
+  </div>
+
+  <div class="game-card soon">
+    <span class="game-num">2016 · PS3 / PS4 / PC</span>
+    <h2 class="game-title">Yakuza Kiwami</h2>
+    <div class="game-meta">
+      <span class="game-status">Coming soon</span>
+    </div>
+  </div>
+
+  <div class="game-card soon">
+    <span class="game-num">2017 · PS4 / PC</span>
+    <h2 class="game-title">Yakuza Kiwami 2</h2>
+    <div class="game-meta">
+      <span class="game-status">Coming soon</span>
+    </div>
+  </div>
+
+  <div class="game-card soon">
+    <span class="game-num">Remastered · PS4 / PC</span>
+    <h2 class="game-title">Yakuza 3</h2>
+    <div class="game-meta">
+      <span class="game-status">Coming soon</span>
+    </div>
+  </div>
+
+  <div class="game-card soon">
+    <span class="game-num">Remastered · PS4 / PC</span>
+    <h2 class="game-title">Yakuza 4</h2>
+    <div class="game-meta">
+      <span class="game-status">Coming soon</span>
+    </div>
+  </div>
+
+  <div class="game-card soon">
+    <span class="game-num">Remastered · PS4 / PC</span>
+    <h2 class="game-title">Yakuza 5</h2>
+    <div class="game-meta">
+      <span class="game-status">Coming soon</span>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  Unofficial, non-commercial fan site. Based on <a href="https://gamefaqs.gamespot.com/search?game=yakuza&type=all" target="_blank" rel="noopener">CyricZ's guides</a> on GameFAQs — for full step-by-step detail, check each game's original guide.
+</footer>
+
+</body>
+</html>
