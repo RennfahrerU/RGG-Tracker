@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5L9F44ZT');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Kaito Files — Trophy Tracker</title>
+<meta name="description" content="Interactive checklist for The Kaito Files DLC trophies (Lost Judgment), based on CyricZ's guide (GameFAQs).">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap">
+<link rel="stylesheet" href="/shared/site.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5L9F44ZT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a class="site-brand" href="/"><span class="dragon">龍</span> Ryu Ga Gotoku Tracker</a>
+    <div class="site-nav-links">
+      <a href="/">‹ Back to Games</a>
+      <a href="/games/kaito-files/" class="current">Kaito Files</a>
+    </div>
+  </div>
+</nav>
+
+<header class="top">
+  <div class="top-inner">
+    <div class="header-topline">
+      <div class="header-text">
+        <div class="kicker">RUN YAKUZA_TRACKER.SYS</div>
+        <h1>THE KAITO FILES</h1>
+        <p class="subtitle">Lost Judgment DLC checklist — a standalone 4-chapter story starring Masaharu Kaito. Only 5 trophies and no Platinum of its own, but a full separate campaign with its own skills and collectibles. Full guide: <a href="https://gamefaqs.gamespot.com/ps4/320117-lost-judgment/faqs/79566/the-kaito-files-dlc" target="_blank" rel="noopener">GameFAQs — CyricZ</a></p>
+      </div>
+      <div class="header-cover"><img src="/assets/covers/kaito.jpg" alt="The Kaito Files cover"></div>
+    </div>
+    <div class="progress-row">
+      <div class="big-stat" id="hdr-trophies">0/5<small>trophies</small></div>
+      <div class="bar-track"><div class="bar-fill" id="hdr-bar"></div></div>
+      <div class="medal-tally" id="hdr-medals">
+        <span><i class="medal-dot md-bronze"></i>0/2</span>
+        <span><i class="medal-dot md-silver"></i>0/2</span>
+        <span><i class="medal-dot md-gold"></i>0/1</span>
+      </div>
+    </div>
+    <div class="save-row">
+      <span id="save-indicator" class="save-indicator">Progress saved in this browser</span>
+      <span class="save-actions">
+        <button type="button" id="export-btn" class="save-btn">⬇ Export</button>
+        <button type="button" id="import-btn" class="save-btn">⬆ Import</button>
+        <input type="file" id="import-file" accept="application/json" hidden>
+      </span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+<main>
+
+  <!-- ===================== MAIN STORY ===================== -->
+  <section class="block">
+    <details open>
+      <summary>
+        <div class="summary-left"><span class="chev">▸</span><h2 class="sec-title">Main Story</h2></div>
+        <span class="badge" data-badge="story"></span>
+      </summary>
+      <div class="sec-body">
+        <p class="sec-intro">Released March 2022. Takes place some time after Lost Judgment, played from the main menu like its own New Game. No Platinum trophy exists for this DLC — these 5 are all there is.</p>
+        <div class="item"><input type="checkbox" autocomplete="off" id="ch1"><label for="ch1"><span class="tag tier-bronze">Bronze</span><span class="lbl-name">What Goes Around — completed Chapter 1</span></label><a class="glink" href="https://gamefaqs.gamespot.com/ps4/320117-lost-judgment/faqs/79566/chapter-1-what-goes-around" target="_blank" rel="noopener">guide ↗</a></div>
+        <div class="item"><input type="checkbox" autocomplete="off" id="ch2"><label for="ch2"><span class="tag tier-bronze">Bronze</span><span class="lbl-name">Like Father, Like Son — completed Chapter 2</span></label><a class="glink" href="https://gamefaqs.gamespot.com/ps4/320117-lost-judgment/faqs/79566/chapter-2-like-father-like-son" target="_blank" rel="noopener">guide ↗</a></div>
+        <div class="item"><input type="checkbox" autocomplete="off" id="ch3"><label for="ch3"><span class="tag tier-silver">Silver</span><span class="lbl-name">Out for Blood — completed Chapter 3</span></label><a class="glink" href="https://gamefaqs.gamespot.com/ps4/320117-lost-judgment/faqs/79566/chapter-3-out-for-blood" target="_blank" rel="noopener">guide ↗</a></div>
+        <div class="item"><input type="checkbox" autocomplete="off" id="ch4"><label for="ch4"><span class="tag tier-silver">Silver</span><span class="lbl-name">Cat &amp; Mouse — completed Chapter 4</span></label><a class="glink" href="https://gamefaqs.gamespot.com/ps4/320117-lost-judgment/faqs/79566/chapter-4-cat-and-mouse" target="_blank" rel="noopener">guide ↗</a></div>
+        <div class="item"><input type="checkbox" autocomplete="off" id="finalchallenge"><label for="finalchallenge"><span class="tag tier-gold">Gold</span><span class="lbl-name">Escaping a Daydream — complete Kaito's Final Challenge</span></label><a class="glink" href="https://gamefaqs.gamespot.com/ps4/320117-lost-judgment/faqs/79566/kaitos-final-challenge" target="_blank" rel="noopener">guide ↗</a></div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===================== EXTRAS ===================== -->
+  <section class="block">
+    <details>
+      <summary>
+        <div class="summary-left"><span class="chev">▸</span><h2 class="sec-title">Extras</h2><a class="glink" href="https://gamefaqs.gamespot.com/ps4/320117-lost-judgment/faqs/79566/kaito-collectibles" target="_blank" rel="noopener">guide ↗</a></div>
+        <span class="badge" data-badge="extras"></span>
+      </summary>
+      <div class="sec-body">
+        <p class="sec-intro">None of these have their own trophy, but they're everything else the guide covers for a full run — no substories exist in this DLC, just the story plus these side systems.</p>
+        <div class="item"><input type="checkbox" autocomplete="off" id="skillsall"><label for="skillsall"><span class="lbl-name">All of Kaito's Skills unlocked</span><span class="lbl-note">Some need specific Battle Rewards completed, others need hidden items found in the environment.</span></label><a class="glink" href="https://gamefaqs.gamespot.com/ps4/320117-lost-judgment/faqs/79566/upgrading-kaito" target="_blank" rel="noopener">guide ↗</a></div>
+        <div class="item"><input type="checkbox" autocomplete="off" id="cats"><label for="cats"><span class="lbl-name">All Cats found</span><span class="lbl-note">Detected with the Primal Ear — zero in when you hear one meow.</span></label></div>
+        <div class="item"><input type="checkbox" autocomplete="off" id="smells"><label for="smells"><span class="lbl-name">All Smells found</span><span class="lbl-note">Detected with the Primal Nose. One requires Chapter 2's Genda Law Office access.</span></label></div>
+        <div class="item"><input type="checkbox" autocomplete="off" id="memorypoints"><label for="memorypoints"><span class="lbl-name">All Memory Points found</span><span class="lbl-note">Detected with the Primal Eye — these unlock gradually over the story, so not all are available from the start.</span></label></div>
+        <div class="item"><input type="checkbox" autocomplete="off" id="kaitoitems"><label for="kaitoitems"><span class="lbl-name">All Kaito Items collected</span></label><a class="glink" href="https://gamefaqs.gamespot.com/ps4/320117-lost-judgment/faqs/79566/kaito-items" target="_blank" rel="noopener">guide ↗</a></div>
+      </div>
+    </details>
+  </section>
+
+</main>
+</div>
+
+<footer class="site-footer">
+  Progress is saved only in this browser and this device (not in the cloud). To move it to another device or make a backup, use "Export" above and then "Import" that file wherever you want to continue.<br>
+  Based on <a href="https://gamefaqs.gamespot.com/ps4/320117-lost-judgment/faqs/79566/the-kaito-files-dlc" target="_blank" rel="noopener">CyricZ's Guide and Walkthrough</a> on GameFAQs — for full step-by-step detail, check the original guide.
+</footer>
+
+<script type="module">
+  import { $all, checkedCount, numVal, isChecked, createStorage, wireAutosave } from '/shared/tracker.js';
+
+  var storage = createStorage('kaito-files-tracker-v1', 'kaito-files-progress.json');
+
+  var TROPHIES = [];
+
+  // --- Main Story (5) ---
+  TROPHIES.push({ tier:'bronze', check: function(){ return isChecked('ch1'); } });
+  TROPHIES.push({ tier:'bronze', check: function(){ return isChecked('ch2'); } });
+  TROPHIES.push({ tier:'silver', check: function(){ return isChecked('ch3'); } });
+  TROPHIES.push({ tier:'silver', check: function(){ return isChecked('ch4'); } });
+  TROPHIES.push({ tier:'gold', check: function(){ return isChecked('finalchallenge'); } });
+
+  function countTier(tier){ return TROPHIES.filter(function(t){ return t.tier===tier; }).length; }
+  function countTierDone(tier){ return TROPHIES.filter(function(t){ return t.tier===tier && t.check(); }).length; }
+
+  function setBadge(key, text, done){
+    var el = document.querySelector('[data-badge="'+key+'"]');
+    if(!el) return;
+    el.textContent = text;
+    el.classList.toggle('done', !!done);
+  }
+
+  function updateAll(){
+    $all('.item').forEach(function(it){
+      var cb = it.querySelector('input[type="checkbox"]');
+      if(cb) it.classList.toggle('checked', cb.checked);
+    });
+
+    var storyDone = checkedCount('#ch1,#ch2,#ch3,#ch4,#finalchallenge');
+    setBadge('story', storyDone+'/5', storyDone>=5);
+
+    var extrasDone = checkedCount('#skillsall,#cats,#smells,#memorypoints,#kaitoitems');
+    setBadge('extras', extrasDone+'/5', extrasDone>=5);
+
+    var doneTotal = TROPHIES.filter(function(t){ return t.check(); }).length;
+    var total = TROPHIES.length;
+    document.getElementById('hdr-trophies').innerHTML = doneTotal+'/'+total+'<small>trophies</small>';
+    document.getElementById('hdr-bar').style.width = Math.round(doneTotal/total*100)+'%';
+
+    var bT=countTier('bronze'), bD=countTierDone('bronze');
+    var sT=countTier('silver'), sD=countTierDone('silver');
+    var gT=countTier('gold'), gD=countTierDone('gold');
+    document.getElementById('hdr-medals').innerHTML =
+      '<span><i class="medal-dot md-bronze"></i>'+bD+'/'+bT+'</span>'+
+      '<span><i class="medal-dot md-silver"></i>'+sD+'/'+sT+'</span>'+
+      '<span><i class="medal-dot md-gold"></i>'+gD+'/'+gT+'</span>';
+  }
+
+  wireAutosave(storage, updateAll);
+  storage.load();
+  updateAll();
+</script>
+
+<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script>
+  kofiWidgetOverlay.draw('renato0', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Donate',
+    'floating-chat.donateButton.background-color': '#ffb238',
+    'floating-chat.donateButton.text-color': '#0b0d09'
+  });
+</script>
+
+<script type="module" src="/shared/bugreport.js"></script>
+
+</body>
+</html>
