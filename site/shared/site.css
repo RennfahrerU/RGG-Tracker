@@ -271,6 +271,10 @@ h1{
 .save-btn::after{content:" ]";color:var(--phos-faint);}
 .save-btn:hover{color:var(--phos);}
 .save-btn:focus-visible{outline:1px solid var(--phos);outline-offset:2px;}
+.save-btn.active{color:var(--phos);text-shadow:0 0 6px rgba(255,178,56,0.35);}
+
+/* ---------- Hide Completed toggle (shared/hide-completed.js) ---------- */
+body.hide-completed .item.checked{display:none;}
 
 /* ---------- Sections ---------- */
 main{padding-top:22px;}
