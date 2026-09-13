@@ -378,6 +378,33 @@ h2.sec-title{
 .item label .lbl-name{color:var(--text);}
 .item label .lbl-note{display:block;color:var(--text-faint);font-size:var(--fs-xs);margin-top:1px;}
 .item.checked label .lbl-name{color:var(--text-dim);text-decoration:line-through;text-decoration-color:var(--line);}
+
+/* Missable spoiler toggle — kept outside <label> so opening it never
+   toggles the checkbox. A .lbl-note that's a direct child of .item
+   (not nested in the label) needs the same block treatment. */
+.item > .lbl-note{flex-basis:100%;display:block;color:var(--text-faint);font-size:var(--fs-xs);margin-top:-2px;}
+.item .spoiler{flex-basis:100%;margin-top:2px;}
+.item .spoiler summary{
+  cursor:pointer;
+  list-style:none;
+  font-family:var(--font-mono);
+  font-size:var(--fs-xs);
+  color:var(--text-faint);
+  border-bottom:1px dashed var(--line);
+  display:inline-block;
+}
+.item .spoiler summary::-webkit-details-marker{display:none;}
+.item .spoiler summary::before{content:"⚠ ";}
+.item .spoiler summary:hover{color:var(--phos);border-bottom-color:var(--phos-dim);}
+.item .spoiler[open] summary{color:var(--phos-dim);border-bottom-color:transparent;}
+.item .spoiler-text{
+  display:block;
+  color:var(--text-dim);
+  font-size:var(--fs-xs);
+  margin-top:3px;
+  padding-left:8px;
+  border-left:2px solid var(--line);
+}
 .tag{
   font-family:var(--font-mono);
   font-size:var(--fs-sm);
