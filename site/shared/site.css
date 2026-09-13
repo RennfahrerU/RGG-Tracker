@@ -486,6 +486,58 @@ footer.site-footer{
 }
 footer.site-footer a{color:var(--text-faint);}
 
+/* ---------- Bug report widget (shared/bugreport.js) ---------- */
+/* Boxed button look (like the original floating version), but rendered
+   inline inside .site-nav-links instead of fixed-floating, so it never
+   overlaps the Ko-fi donate widget in the corner. */
+.bugreport-btn{
+  font-family:var(--font-mono);
+  font-size:var(--fs-sm);
+  color:var(--text-faint);
+  background:var(--bg-card);
+  border:1px solid var(--line);
+  padding:4px 10px;
+  cursor:pointer;
+  opacity:.85;
+  transition:opacity .12s ease, color .12s ease, border-color .12s ease;
+}
+.bugreport-btn:hover{opacity:1;color:var(--phos);border-color:var(--phos-dim);}
+.bugreport-btn:focus-visible{outline:1px solid var(--phos);outline-offset:2px;opacity:1;}
+
+.bugreport-dialog{
+  background:var(--bg-card);
+  color:var(--text);
+  border:1px solid var(--line);
+  padding:0;
+  max-width:420px;
+  width:calc(100% - 32px);
+  font-family:var(--font-body);
+}
+.bugreport-dialog::backdrop{background:rgba(0,0,0,0.6);}
+.bugreport-form{padding:18px 20px;display:flex;flex-direction:column;gap:12px;}
+.bugreport-form h3{
+  margin:0;
+  font-family:var(--font-display);
+  font-size:var(--fs-md);
+  color:var(--phos);
+  text-transform:uppercase;
+  letter-spacing:.03em;
+}
+.bugreport-form label{display:flex;flex-direction:column;gap:4px;font-size:var(--fs-sm);color:var(--text-dim);}
+.bugreport-optional{color:var(--text-faint);font-size:var(--fs-xs);}
+.bugreport-form input, .bugreport-form textarea{
+  background:var(--bg-elevated);
+  border:1px solid var(--line);
+  color:var(--text);
+  font-family:var(--font-body);
+  font-size:var(--fs-base);
+  padding:6px 8px;
+  resize:vertical;
+}
+.bugreport-form input:focus-visible, .bugreport-form textarea:focus-visible{outline:1px solid var(--phos);}
+.bugreport-note{font-size:var(--fs-xs);color:var(--text-faint);margin:0;}
+.bugreport-actions{display:flex;justify-content:flex-end;gap:10px;}
+
 @media (prefers-reduced-motion: reduce){
   .bar-fill, .chev{transition:none;}
 }
