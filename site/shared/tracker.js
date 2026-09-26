@@ -108,11 +108,36 @@ export function wireSaveUI(storage){
 }
 
 /**
+ * Makes the sticky header collapse to just the progress bar + save row while
+ * scrolling: a negative sticky `top` lets the title/cover/subtitle scroll away
+ * naturally (no scroll listener, no layout jump). The offset is measured, not
+ * hardcoded, because the topline's height depends on subtitle wrapping and the
+ * webfont — so it's re-measured on resize, font load, and topline size change.
+ */
+function wireCompactHeader(){
+  var header = $('header.top');
+  var bar = header && $('.progress-row', header);
+  var topline = header && $('.header-topline', header);
+  if(!header || !bar || !topline) return;
+
+  function measure(){
+    var hidden = Math.max(0, bar.offsetTop - 10);
+    header.style.top = (-hidden) + 'px';
+  }
+
+  measure();
+  window.addEventListener('resize', measure);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+  if(window.ResizeObserver) new ResizeObserver(measure).observe(topline);
+}
+
+/**
  * Wires change/input on the whole body: saves state and calls onChange
  * (each page uses this to recompute its badges/progress).
  */
 export function wireAutosave(storage, onChange){
   var ui = wireSaveUI(storage);
+  wireCompactHeader();
   function handle(e){
     if(e.target && (e.target.type === 'checkbox' || e.target.type === 'number')){
       storage.save(ui.markSaved);
