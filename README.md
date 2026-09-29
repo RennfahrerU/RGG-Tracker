@@ -4,7 +4,7 @@ Interactive Platinum/100% checklists for the Yakuza / Like a Dragon series — c
 
 ![RGG Tracker logo](site/assets/rgg-tracker-logo.jpg)
 
-**Live site:** https://rennfahreru.github.io/RGG-Tracker/
+**Live site:** https://rgg-tracker.com/
 
 ## What this is
 
